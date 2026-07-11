@@ -1,10 +1,13 @@
+.about-container {
+  width: 100%;
+  background: rgba(247, 239, 183, 0.366);
+}
+
 .about-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(247, 239, 183, 0.366);
 
-  width: 100%;
   min-height: 90vh;
 
   padding: 60px 80px;
@@ -18,21 +21,18 @@
 .about-left {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .about-image {
-  width: 460px;
-  height: 460px;
-
+  width: 430px;
+  height: 430px;
   object-fit: cover;
 
-  transform: rotate(-8deg);
-
-  border: 6px solid #fbbf24;
   border-radius: 12px;
+  border: 6px solid #fbbf24;
 
-  transition: 0.3s ease;
+  transform: rotate(-8deg);
+  transition: 0.3s;
 }
 
 .about-image:hover {
@@ -40,36 +40,90 @@
 }
 
 .about-right {
-  padding: 40px;
+  padding-left: 60px;
 }
 
-.about-right .about-title {
+.about-title {
   font-size: 3rem;
-  margin-bottom: 20px;
-  color: rgba(15, 23, 42, 0.9);
+  color: #0f172a;
+  margin-bottom: 25px;
 }
 
-.about-right .about-description {
-  font-size: 1.6rem;
+.about-description {
+  font-size: 1.3rem;
   line-height: 1.8;
-  color: #02204b;
+  color: #334155;
   margin-bottom: 20px;
+}
+
+.interests-section {
+  padding: 60px 80px 80px;
+}
+
+.about-more {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #0f172a;
+  margin-bottom: 50px;
+}
+
+.interests-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.interest {
+  flex: 1;
+  text-align: center;
+}
+
+.interest-image {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.interest-image:hover {
+  transform: scale(1.05);
+}
+
+.interest-title {
+  margin-top: 18px;
+  font-size: 1.3rem;
+  color: #0f172a;
 }
 
 @media (max-width: 900px) {
   .about-section {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
-  }
-
-  .about-image {
-    width: 280px;
-    height: 280px;
-    margin-bottom: 40px;
+    padding: 50px 30px;
   }
 
   .about-right {
-    padding: 0;
+    padding: 40px 0 0;
+  }
+
+  .about-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .interests-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .interest {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+
+  .interest-image {
+    width: 180px;
+    height: 180px;
   }
 }
